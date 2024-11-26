@@ -1,6 +1,6 @@
-import './../styles//_variables.scss'
+import './../styles/_variables.scss'
 
-function HeaderPage(){
+export default function HeaderPage(){
  return (
   <header className='headerPage'>
    <a href="/"><div className='vinyl'></div></a>
@@ -8,5 +8,3 @@ function HeaderPage(){
   </header>
  )
 }
-
-export default HeaderPage

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import allProducts from './../assets/data/products'
 
-function Products(){
+export default function Products(){
  const productsThumbnails = allProducts.map((product, index) => {
   return (
    <div id={product.id} className='productResume' >
@@ -17,5 +17,3 @@ function Products(){
   </article>
  )
 }
-
-export default Products

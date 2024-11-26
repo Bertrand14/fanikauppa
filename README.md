@@ -1,8 +1,8 @@
-# React + Vite
+# Fanikauppa
+Tehtävänä oli suunnitella prototyyppi fanikaupalle. Fanikauppa on ReactJS:llä toteutettu Single Page Application. Valitsin "Edith Piaf"-teema, koska Halusin luoda tuotteen, joka perustuu teemaan, jota en tiesi koskaan käsitellyt.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Median Copyright
+Käytin DeepAI palvelua niin, että voin olla varma, että tuotekuvien käyttöehdot sallivat uudelleen käytön ja julkaisemisen kun projekti käynnistetään Herokussa.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Haasteet
+React-router:in käyttäminen oli minulle uusi asia. Olen käyttänyt "W3schools"-sivuston niin, että pystyn käyttä sen.

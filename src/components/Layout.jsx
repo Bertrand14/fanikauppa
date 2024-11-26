@@ -1,23 +1,26 @@
-import { useState } from 'react'
+import React from 'react';
 import { Outlet, Link } from "react-router-dom";
-import navparts from '../assets/data/navparts'
-import HeaderPage from './Header';
+import navParts from '../assets/data/navparts'
+import HeaderPage from './Header'
+import FooterPage from './Footer'
 
 function Layout(){
- let allParts = navparts.map((infos, index) => {
-  return (
-   <li key={index} ><Link to={infos.path}>{infos.title}</Link></li>
-  )
- })
  return (
   <>
    <HeaderPage />
    <nav>
     <ul>
-     {allParts}
+     {navParts.map((infos, index) => (
+       <li key={index}>
+        <Link to={infos.path}>{infos.title}</Link>
+       </li>
+     ))}
     </ul>
    </nav>
-   <Outlet />
+   <main>
+     <Outlet />
+   </main>
+   <FooterPage />
   </>
  )
 }
