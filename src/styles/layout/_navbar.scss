@@ -8,6 +8,7 @@ nav {
   grid-auto-flow: column;
   gap:2vw;
   list-style-type: none;
+  justify-items: center;
   li {
    color: $OffWhite;
    padding:1vw 2vw;
@@ -16,6 +17,7 @@ nav {
     background-color: $OffWhite; /* Blanc cassé */
     color: $DeepBlack; /* Noir profond */
     border:$DeepBlack;
+    cursor:pointer;
    }
   }
  }
