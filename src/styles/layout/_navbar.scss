@@ -1,0 +1,23 @@
+@import '../variables';
+
+nav {
+ font-family: "Montserrat", sans-serif;
+ background-color: $CarmineRed;
+ ul{
+  display:grid;
+  grid-auto-flow: column;
+  gap:2vw;
+  list-style-type: none;
+  li {
+   color: $OffWhite;
+   padding:1vw 2vw;
+   text-align: center;
+   &:hover {
+    background-color: $OffWhite; /* Blanc cassé */
+    color: $DeepBlack; /* Noir profond */
+    border:$DeepBlack;
+   }
+  }
+ }
+
+}
