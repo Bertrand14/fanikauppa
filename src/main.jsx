@@ -1,17 +1,6 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import Nav from './components/Nav'
-import HeaderPage from './components/Header';
-import Home from './components/Home'
-import Products from './components/Products'
+import ReactDOM from "react-dom/client";
 import './styles/main.scss';
+import App from './App'
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <HeaderPage />
-    <Nav />
-    <main>
-      <Home />
-    </main>
-  </StrictMode>,
-)
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);

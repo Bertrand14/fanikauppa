@@ -6,19 +6,18 @@ nav {
  ul{
   display:grid;
   grid-auto-flow: column;
-  gap:2vw;
   list-style-type: none;
   justify-items: center;
   li {
-   color: $OffWhite;
    padding:1vw 2vw;
    text-align: center;
-   &:hover {
+   &:hover{
     background-color: $OffWhite; /* Blanc cassé */
-    color: $DeepBlack; /* Noir profond */
-    border:$DeepBlack;
     cursor:pointer;
+    color: $CarmineRed;
    }
+   a,a:visited,a:link {color: $OffWhite;padding:1vw 2vw;}
+
   }
  }
 

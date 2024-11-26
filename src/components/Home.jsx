@@ -9,16 +9,14 @@ function Home(){
    return subpart.map((part, index) => (
     <>
     <h4 key={index}>{part.subtitle}</h4>
-    {part.chapitres}
+    {Object.entries(part.chapitres).map(([nro, chapitre]) => (
+     <p key={nro}
+     dangerouslySetInnerHTML={{ __html: chapitre }}>
+    </p>
+    ))}
     </>
    ))
-   
   }
-  
-  // let chapitres = Object.entries(mainchapitre.chapitres).map(([subtitle, chapitres], index) => {
-  //  console.log()
-  //  return <h3 key={index}>{subtitle}</h3>
-  // })
  }
 
  let allChapitres = presentation.map((mainchapitre, index) => {
