@@ -6,3 +6,4 @@ Käytin DeepAI palvelua niin, että voin olla varma, että tuotekuvien käyttöe
 
 # Haasteet
 React-router:in käyttäminen oli minulle uusi asia. Olen käyttänyt "W3schools"-sivuston niin, että pystyn käyttä sen.
+
