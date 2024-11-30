@@ -11,9 +11,11 @@ function Layout(){
    <nav>
     <ul>
      {navParts.map((infos, index) => (
-       <li key={index}>
-        <Link to={infos.path}>{infos.title}</Link>
+      <Link key={index} to={infos.path}>
+       <li >
+         {infos.title}
        </li>
+      </Link>
      ))}
     </ul>
    </nav>

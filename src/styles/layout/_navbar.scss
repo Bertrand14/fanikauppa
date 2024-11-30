@@ -3,21 +3,23 @@
 nav {
  font-family: "Montserrat", sans-serif;
  background-color: $CarmineRed;
+ position: sticky;
+ top:0;
+ z-index:100;
  ul{
   display:grid;
   grid-auto-flow: column;
   list-style-type: none;
   justify-items: center;
   li {
-   padding:1vw 2vw;
+   padding:0.5vw 1vw;
    text-align: center;
+   color:$OffWhite;
    &:hover{
     background-color: $OffWhite;
     cursor:pointer;
     color: $CarmineRed;
    }
-   a,a:visited,a:link {color: $OffWhite;padding:1vw 2vw;}
-
   }
  }
 

@@ -11,7 +11,7 @@ const navParts = [
  { path: "/products", title: "Tuotteet", element: <Products /> },
  { path: "/blog", title: "Blogi", element: <Blog /> },
  { path: "/community", title: "Piaf yhteisö", element: <Community /> },
- { path: "/cart", title: "Ostokori", element: <Cart /> },
+ // { path: "/cart", title: "Ostokori", element: <Cart /> },
 ];
 
 
