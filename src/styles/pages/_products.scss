@@ -56,6 +56,7 @@
     transform: rotate(60deg);
    }
    .price{
+    font-size: 0.8rem;
     position:relative;
     top:50%;
     left:50%;
@@ -66,7 +67,7 @@
    }
   }
 
-  .cartPlusButton{
+  .cartButton{
    position:absolute;
    right:0;
    left:auto;
@@ -86,38 +87,56 @@
  position:sticky;
  bottom:0;
  background-color:$VintageBeige;
- z-index:100;
- border-top:1px solid $DeepBlack;
  box-shadow: 0 0 1vh 0 $DeepBlack;
  max-height: 50vh;
  overflow-y: scroll;
+	z-index:100;
  header{
   display:grid;
   grid-template-columns: 1fr 4fr 4fr 1fr;
+		align-items: center;
   position: sticky;
   top:0;
   background-color: $VintageBeige;
+		border-top:1px solid $DeepBlack;
+		border-bottom:1px solid $DeepBlack;
+		box-shadow: 0 0 0.5vh 0 $DeepBlack;
+		z-index:101;
   div{padding:0 1vw;}
-  #showButton *{color:$CarmineRed;}
+  #showButton{
+			i{
+				svg{
+					aspect-ratio: 1/1;border-radius: 50%;padding:2%;
+					path{
+						color:$CarmineRed;
+					}
+					&:hover{
+						background-color: $CarmineRed;
+						path{color:$VintageBeige;}
+					}
+				}
+			}
+		}
   #actionMessage{text-align: center; font-size: 1vw;} // Color have to be the same of #cart
   #text{text-align: right;}
   #totalSum{text-align: left;}
  }
  #resumeCart{
   display: none;
+		padding:0 1%;
   table{
-   font-size:0.8rem;
    border-collapse: collapse;
-   margin: 0 2vw 0 auto;   
+   margin: 0 2vw 0 auto;
+   min-width:50%;
+			* {font-size: 0.9vw;}
    thead{
     th{
-     font-size: 1vw;
+     font-size: 1.25em;
      padding: 0.8vw;
      word-break:unset;
     }
    }
    tbody{
-
     tr{
      &:nth-child(odd){
       background-color: $OffWhite;
@@ -126,16 +145,142 @@
       background-color: $CarmineRed;
      }
      td{
-     font-size: 0.9vw;
-     border-bottom: 1px solid $DeepBlack;
-     padding: 0.8vw;
-     } 
-         
+      border-bottom: 1px solid $DeepBlack;
+      padding: 0.8vw;
+      &.productPrice, 
+      &.productAmount,
+      &.productQty{
+       text-align: center;
+      }
+      &.productQty span{
+							display:inline-block;
+							width:2vw;
+      }
+     }
+     .cartButton{
+      &:hover{
+       transform: scale(1.1);
+       cursor: pointer;
+      }
+      &:active{
+       transform: scale(0.9);
+      }
+     }
+    }
    }
-
-   }
+   tfoot{
+    th {
+     text-align: right;
+     padding:0 1%;
+    }
+    td{
+					text-align: right;
+					padding-right:2%;
+					&#amountDue{
+							border-top: 3px double black ;
+					}
+    }
+			#emptyCartButton{
+				cursor: pointer;
+				&:active{
+					transform: scaleX(0.8);
+				}
+			}
   }
+  }
+		form {
+			* {font-size:0.8em;}
+		}
  }
+}
+
+form#sendOrder {
+ display: none;
+	max-width: 50%;
+	margin: 2vh auto;
+	padding: 1vw;
+	background-color: $OffWhite;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	h4 {text-align: center;}
+	div {
+			position: relative;
+			margin-bottom: 4vh;
+			input {
+					width: 100%;
+					padding: 1vh 2vw;
+					border: 1px solid #ccc;
+					border-radius: 4px;
+					outline: none;
+					background: transparent;
+					transition: border 0.3s;
+					&:focus {
+							border-color: $DeepBlack;
+					}
+					&:focus + label,
+					&:not(:placeholder-shown) + label {
+						top:0;
+						font-size:1.2vw;
+						color: $CarmineRed;
+						background: $OffWhite;
+					}
+			}
+
+			label {
+					position: absolute;
+					top: 50%;
+					left: 16px;
+					transform: translateY(-50%);
+					background: #f9f9f9;
+					padding: 0 4px;
+					font-size: 1rem;
+					color: #666;
+					pointer-events: none;
+					transition: all 0.3s;
+			}
+	}
+
+	fieldset {
+			border: 1px solid #ccc;
+			border-radius: 0.5vw;
+			padding: 2%;
+			margin-bottom: 1.5rem;
+			legend {
+					padding: 0 1vw;
+					font-size: 1rem;
+					font-weight: bold;
+					color: #333;
+			}
+			div {
+				margin-bottom: 4vh;
+					input {
+							&:focus {
+									border-color: $DeepBlack;
+							}
+
+							&:focus + label,
+							&:not(:placeholder-shown) + label {
+									color: $CarmineRed;
+							}
+					}
+			}
+	}
+
+	button {
+			display: block;
+			width: 100%;
+			padding: 1vh 1vw;
+			font-weight: bold;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			transition: background 0.3s;
+			color:$DeepBlack;
+			&:hover {
+				background-color: $DeepBlack;
+				color:$CarmineRed;
+			}
+	}
 }
 
 @media all and (max-width:800px){
