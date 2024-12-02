@@ -1,0 +1,12 @@
+@import '../variables';
+
+button {
+ font-family: "Montserrat", sans-serif;
+ background-color: $CarmineRed;
+ color: $OffWhite;
+}
+
+button:hover {
+ background-color: $DeepBlack;
+ color: $VintageBeige;
+}

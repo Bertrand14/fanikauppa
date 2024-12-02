@@ -1,0 +1,12 @@
+@import '../variables';
+
+a,
+a:link,
+a:visited{
+ color:$CarmineRed;
+ text-decoration: none;
+}
+
+a:hover{
+ text-decoration: underline;
+}

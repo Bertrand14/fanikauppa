@@ -1,0 +1,13 @@
+@import './variables';
+/* Reset de base */
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ color:$DeepBlack;
+}
+
+body {
+ background-color: $VintageBeige; 
+ color: $DeepBlack;
+}
