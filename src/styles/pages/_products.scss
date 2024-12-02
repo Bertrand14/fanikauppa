@@ -3,10 +3,11 @@
 #productsThumbnails{
  display:grid;
  grid-template-columns: repeat(4, 1fr);
- gap: 1em;
+ gap: 3em 1em;
 
  .productResume{
   position: relative;
+  transition: all 250ms;
   .illustration{
    width:100%;
    aspect-ratio: 1/1;
@@ -19,6 +20,7 @@
    }
   }
   .name{
+   text-align: center;
 
   }
   .type{
@@ -66,10 +68,9 @@
 
    }
   }
-
   .cartButton{
    position:absolute;
-   right:0;
+   right:1vw;
    left:auto;
    bottom:0;
    &:hover{
@@ -79,6 +80,13 @@
    &:active{
     transform: scale(0.9);
    }
+  }
+  &:hover{
+   box-shadow: 0 0 1vw black;
+   .star{
+    box-shadow:none;
+   }
+   
   }
  }
 }
