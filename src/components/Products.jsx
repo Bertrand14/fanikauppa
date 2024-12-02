@@ -118,7 +118,9 @@ export default function Products(){
     {allProducts.map((product) => {
      return (
       <div key={product.id} id={product.id} className='productResume' >
-       <div className='illustration'><img src={`./src/assets/images/products/${product.id}.jpeg`} alt={product.name} /></div>
+       <div className='illustration'>
+        <img src={product.img} alt={product.name} />
+       </div>
         <div className='name'>{product.name}</div>
         {/* <span className='type'>{product.type}</span> */}
         <div className='star'><div className='price'>{MonetaryNumber(product.price, true)}</div></div>
